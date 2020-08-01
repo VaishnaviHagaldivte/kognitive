@@ -1,0 +1,157 @@
+
+body,html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    background-color: #EDF1F2 !important;
+    height: 100%;
+
+
+}
+  
+.login-container {
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    background-color: white !important;
+}
+.login-form {
+    max-width: 100%;
+    width: 370px;
+}
+.icondiv {
+    padding-bottom: 10vh;
+}
+.icons-container {
+    padding-top: 50px;
+}
+#inlineFormInputName1, #inlineFormInputName2 {
+    background-color: #EDF1F2;
+}
+.btn-grp {
+    border-radius: 30px 30px 30px 30px;
+}
+.home-container {
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+}
+.i-icon2 >i {
+    margin-left: 10px;
+}
+.tasks-container-top > .i-icon2 {
+    float: right;
+    margin-right: 10%;
+}
+.tasks-container-top {
+    width: 100%;
+    padding-top: 30px;
+}
+.btn-grp2 {
+    border-radius: 10px 10px 10px 10px;
+}
+.list-btn {
+    background-color: purple;
+    color: white;
+    margin-left: 30px;
+}
+#box1 {
+    height: auto;
+    min-height: 80vh;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+	background: white;
+    border-radius: 25px;
+}
+#box2 {
+    height: auto;
+    min-height: 50vh;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+	background: white;
+    border-radius: 25px;
+}
+.tasks-container {
+    width: 100%;
+    margin-left: 30px;
+}
+.progress-bar-div {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.critical-btn {
+    background-color: red;
+    color: white;
+    margin-left: 30px;
+    width: 80px;
+    height: 30px;
+    text-align: left;
+}
+.critical-task > .i-icon2 {
+    float: right;
+    margin-right: 10%;
+}
+.criticals-list> i {
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.criticals-list> b {
+    color: black;
+}
+.due-details {
+    margin-left: 80px;
+}
+.all-task {
+    margin-top: 30px;
+}
+.all-task > .i-icon2 {
+    float: right;
+    margin-right: 10%;
+}
+.all-btn {
+    background-color: grey;
+    color: white;
+    margin-left: 30px;
+    width: 50px;
+    height: 30px;
+    text-align: left;
+}
+#sticky-footer {
+    flex-shrink: none;
+}
+.bottom-footer {
+    background-color: white;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+ 
+.icons-group  {
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.icons-group > a {
+    color: black;
+}
+.icons-group > a:hover {
+    background-color: blue;
+    color: white;
+    /* height: 30px;
+    width: 30px; */
+
+}
+.tasks-details-container {
+    width: 100%;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+#box2 > .task-progress-bar {
+    margin-left: 20px;
+}
+.task-details-div > div {
+    margin-left: 30px;
+    color: black;
+}

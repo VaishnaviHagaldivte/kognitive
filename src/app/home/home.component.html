@@ -1,0 +1,121 @@
+﻿<div class="container">
+    <div class="icons-container d-flex">
+      <div class="cornericon col-md-11">
+        <img src="assets/logo.PNG" alt="Kognitive Icon" />
+      </div>
+      <div class="i-icon">
+        <i class="fa fa-cog fa-2x" style="color:rgb(194, 53, 53);" aria-hidden="true"></i>
+      </div>
+      <div class="i-icon2">
+        <i class="fa fa-ellipsis-h fa-2x" style="color:#DDDDDD;" aria-hidden="true"></i>
+      </div>
+    </div>
+        
+      <div id="box1">
+        <!-- Mytask portion -->
+        <div class="tasks-container-top d-flex mb-4">
+          <div class="my-tasks-btn-div col-md-10">
+            <button type="submit" class="btn btn-grp2 list-btn">My Tasks</button>
+          </div>
+          <div class="i-icon2">
+            <i class="fa fa-ellipsis-h fa-2x" style="color:#DDDDDD;" aria-hidden="true"></i>
+          </div>
+        </div>
+        
+        <!-- Todays progress -->
+        <div class="tasks-container d-flex">
+          <div class="col-md-12">
+            <b>Today's Progress</b>
+          </div>
+        </div>
+
+        <!-- progress bar and modal -->
+        <div class="progress-bar-div col-md-12 d-flex">
+          <div class="progress col-md-10">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="modal-class col-md-2">
+            <p>
+              <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-chevron-down" style="color:#DDDDDD;" aria-hidden="true"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- show modal on click of arrow -->
+        <div class="modal-show col-md-12 mb-4">
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+             You only completed 25% of tasks
+            </div>
+          </div>
+        </div>
+
+        <!-- critical task count -->
+        <div class="critical-task d-flex mb-4">
+          <div class="my-tasks-btn-div col-md-10">
+            <button type="submit" class="btn btn-grp2 critical-btn">Critical {{critical}}</button>
+          </div>
+          <div class="i-icon2">
+            <i class="fa fa-ellipsis-h fa-2x" style="color:#DDDDDD;" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <!-- criticals task list -->
+        <div *ngFor="let task of tasks">
+           <div *ngIf="task.status=='Pending'">
+                <div class="criticals-list d-flex mb-2" (click)="onClickTask(task)">
+                    <i class="fa fa-circle-o fa-1x"   style="color:red;" aria-hidden="true"></i><b class="col-md-12">{{task.attr.body}}</b>
+                </div>
+                <div class="due-details d-flex mb-4">
+                    <i class="fa fa-chevron-right" style="color:#DDDDDD; margin-top: 5px;" aria-hidden="true"></i> <b class="col-md-12" style="color: red;">{{task.status}}</b>
+                </div>
+            </div> 
+        </div>
+
+        <!-- all tasks count -->
+        <div class="all-task d-flex mb-4">
+          <div class="my-tasks-btn-div col-md-10">
+            <button type="submit" class="btn btn-grp2 all-btn">All <span><b>{{tasks.length}}</b></span></button>
+          </div>
+          <div class="i-icon2">
+            <i class="fa fa-ellipsis-h fa-2x" style="color:#DDDDDD;" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <!-- all task list -->
+        <div *ngFor="let task of tasks">
+            <div class="criticals-list d-flex mb-2" (click)="onClickTask(task)">
+                <i class="fa fa-circle-o fa-1x" *ngIf="task.status=='Pending'" style="color:red;" aria-hidden="true"></i>
+                <i class="fa fa-circle-o fa-1x" *ngIf="task.status != 'Pending'" style="color:#DDDDDD;  margin-top: 5px;" aria-hidden="true"></i><b class="col-md-12">{{task.attr.body}}</b>
+              </div>
+              <div class="due-details d-flex mb-4">
+                <i class="fa fa-chevron-right" style="color:#DDDDDD; margin-top: 5px;" aria-hidden="true"></i> <b class="col-md-12" style="color: red;">{{task.status}}</b>
+            </div>
+        </div>
+      </div>
+      
+        <!-- footer icons -->
+        <footer id="sticky-footer" class="bottom-footer">
+          <div class="container align-items-center justify-content-center d-flex">
+            <div class="icons-group d-flex">
+              <a class="nav-item nav-link" routerLink="/home">
+                <i class="fa fa-home  fa-2x" aria-hidden="true"></i>
+              </a>
+              <a class="nav-item nav-link" routerLink="/home">
+                <i class="fa fa-calendar-o  fa-2x" aria-hidden="true"></i>
+              </a>
+              <a class="nav-item nav-link" routerLink="/home">
+                <i class="fa fa-comment-o  fa-2x" aria-hidden="true"></i>
+              </a>
+              <a class="nav-item nav-link" routerLink="/home">
+                <i class="fa fa-headphones  fa-2x" aria-hidden="true"></i>
+              </a>
+              <a class="nav-item nav-link" (click)="logout()">
+                <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+              </a>
+          </div>
+          </div>
+        </footer>
+    </div>

@@ -1,0 +1,26 @@
+﻿<div class="container d-flex align-items-center justify-content-center">
+    <div class="login-container d-flex align-self-center justify-content-center">
+      <form class="login-form text-center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="icondiv">
+          <img src="/src/assets/logo.PNG" alt="Kognitive Icon" />
+        </div>
+        <div class="form-group">
+          <div class="col-md-12 mb-4">
+            <input type="text" formControlName="username" class="form-control mr-sm-1" id="inlineFormInputName1" placeholder="Your Employee ID" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback mb-4 ">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+          <div class="col-md-12 mb-4">
+            <input type="text"  formControlName="password" class="form-control mr-sm-1" id="inlineFormInputName2" placeholder="Your Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-grp">
+          <button [disabled]="loading" type="submit" class="btn btn-grp btn-primary mb-2">Log In</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,5 +1,4 @@
-# angular-7-registration-login-example
+# Kognitive Application
 
-Angular 7 User Registration and Login Example with Webpack 4
-
-Full tutorial with example available at http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+A sample created for Optimy.ai. Consists of login code and list of tasks and click on each task gives task details.
+APIs did not work properly, hence commented and utilised local data

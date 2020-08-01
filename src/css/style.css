@@ -22,9 +22,7 @@ body,html{
 .icondiv {
     padding-bottom: 10vh;
 }
-.icons-container {
-    padding-top: 50px;
-}
+
 #inlineFormInputName1, #inlineFormInputName2 {
     background-color: #EDF1F2;
 }
@@ -61,7 +59,7 @@ body,html{
     width: 100%;
     margin-top: 50px;
     padding-bottom: 10px;
-	background: white;
+    background: white;
     border-radius: 25px;
 }
 #box2 {
